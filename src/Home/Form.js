@@ -71,14 +71,16 @@ const Form = () => {
         if (data.acknowledged) {
           toast.success("Data Save Successfully");
         }
-        window.location.href = "http://localhost:3000";
+        window.location.href = "https://job-task-221.netlify.app/";
       });
   };
 
   return (
     <div className="min-h-screen">
-      <div className="hero pt-20 bg-base-200">
-        <div className="hero-content w-2/5 flex-col">
+      <h3 className="text-2xl text-green-500 bg-black p-4">Job Assignment</h3>
+
+      <div className="hero  bg-base-200">
+        <div className="hero-content lg:w-2/5 md:w-3/5 w-full">
           <div className="card  w-full shadow-xl bg-base-100">
             <form onSubmit={handleInfo} className="card-body">
               <div className="form-control">
@@ -99,7 +101,7 @@ const Form = () => {
       </div>
 
       <div className="hero pt-10 pb-40 bg-base-200">
-        <div className="hero-content w-2/5 flex-col">
+        <div className="hero-content lg:w-2/5 md:w-3/5 w-full">
           <div className="card  w-full shadow-xl bg-base-100">
             <table className="table w-full text-xl">
               <thead></thead>
