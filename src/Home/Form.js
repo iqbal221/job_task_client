@@ -9,7 +9,7 @@ const Form = () => {
 
   // data receive from database
   useEffect(() => {
-    fetch("http://localhost:5000/info")
+    fetch("https://job-task-server-omega.vercel.app/info")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -28,7 +28,7 @@ const Form = () => {
       } else if (result.isDenied) {
       }
       console.log(id);
-      fetch(`http://localhost:5000/info/${id}`, {
+      fetch(`https://job-task-server-omega.vercel.app/info/${id}`, {
         method: "DELETE",
         headers: {
           "content-type": "application/json",
@@ -58,7 +58,7 @@ const Form = () => {
       Info: Info,
     };
     // form data save to server
-    fetch("http://localhost:5000/info", {
+    fetch("https://job-task-server-omega.vercel.app/info", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -76,8 +76,8 @@ const Form = () => {
   };
 
   return (
-    <>
-      <div className="hero pt-14 bg-base-200">
+    <div className="min-h-screen">
+      <div className="hero pt-20 bg-base-200">
         <div className="hero-content w-2/5 flex-col">
           <div className="card  w-full shadow-xl bg-base-100">
             <form onSubmit={handleInfo} className="card-body">
@@ -98,7 +98,7 @@ const Form = () => {
         </div>
       </div>
 
-      <div className="hero pt-10 pb-24 bg-base-200">
+      <div className="hero pt-10 pb-40 bg-base-200">
         <div className="hero-content w-2/5 flex-col">
           <div className="card  w-full shadow-xl bg-base-100">
             <table className="table w-full text-xl">
@@ -128,7 +128,7 @@ const Form = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
